@@ -11,10 +11,62 @@
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p>This is the privacy declaration for Vibestorm Studios. Please replace this text with your actual privacy policy content.</p>
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <button id="enBtn" style="margin-right: 8px;">English</button>
+        <button id="noBtn">Norsk</button>
+    </div>
+    <div id="policy-en">
+        <h1>Privacy Policy</h1>
+        <p>
+            Vibestorm Studios' apps never collect any information about the user directly. Any data that is stored or retrieved in connection with our apps is solely due to essential requirements to facilitate ads through Google's official advertisement platform, AdMob.
+        </p>
+        <p>
+            Our apps will never acquire any personal data about their users. All data storage is limited to the user's device, and no data is ever stored on external servers. The information processed is strictly limited to what is necessary to enable advertising via AdMob, in accordance with Google's guidelines.
+        </p>
+        <p>
+            We do not share user data with third parties, except as required to display ads through AdMob. For more information on how AdMob handles data, please refer to Google's privacy policy.
+        </p>
+        <p>
+            If you have any questions about privacy in our apps, you can contact us via the contact information provided in the app or on our website.
+        </p>
+    </div>
+    <div id="policy-no" style="display:none;">
+        <h1>Personvernerklæring</h1>
+        <p>
+            Vibestorm Studios' apper samler aldri inn informasjon om brukeren direkte. All data som lagres eller hentes i forbindelse med våre apper, er utelukkende knyttet til nødvendige krav for å vise annonser gjennom Googles offisielle annonseplattform, AdMob.
+        </p>
+        <p>
+            Våre apper innhenter aldri personopplysninger om brukerne. All lagring av data skjer kun lokalt på brukerens enhet, og ingen data lagres på eksterne servere. Informasjonen som behandles, er begrenset til det som er nødvendig for å muliggjøre annonsering via AdMob, i tråd med Googles retningslinjer.
+        </p>
+        <p>
+            Vi deler ikke brukerdata med tredjeparter, bortsett fra det som er nødvendig for å vise annonser gjennom AdMob. For mer informasjon om hvordan AdMob håndterer data, henviser vi til Googles personvernregler.
+        </p>
+        <p>
+            Dersom du har spørsmål om personvern i våre apper, kan du kontakte oss via kontaktinformasjonen som er oppgitt i appen eller på vår nettside.
+        </p>
+    </div>
     <footer>
         &copy; 2025 Vibestorm Studios
     </footer>
+    <script>
+        const enBtn = document.getElementById('enBtn');
+        const noBtn = document.getElementById('noBtn');
+        const policyEn = document.getElementById('policy-en');
+        const policyNo = document.getElementById('policy-no');
+        enBtn.onclick = function() {
+            policyEn.style.display = '';
+            policyNo.style.display = 'none';
+            enBtn.disabled = true;
+            noBtn.disabled = false;
+        };
+        noBtn.onclick = function() {
+            policyEn.style.display = 'none';
+            policyNo.style.display = '';
+            enBtn.disabled = false;
+            noBtn.disabled = true;
+        };
+        // Set default
+        enBtn.disabled = true;
+    </script>
 </body>
 </html>
